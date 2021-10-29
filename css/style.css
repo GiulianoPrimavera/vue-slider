@@ -6,6 +6,7 @@
 main{
     padding: 200px;
 }
+/* sezione di sinistra */
 .container{
     width: 100%;
     height: 500px;
@@ -35,8 +36,37 @@ main{
     color: white;
 }
 
+/* sezione di destra */
 .arrow_container{
     width: 20%;
+    position: relative;
+}
+.arrow{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    display: inline-block;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+    z-index: 99;
+}
+.upward_arrow{
+    top: 0;
+}
+.downward_arrow{
+    bottom: 0;
+}
+
+.image_list_container{
+    overflow: auto;
+    width: 100%;
     height: 100%;
-    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+}
+.image_list_container img{
+    width: 100%;
+    height: 100%;
 }
