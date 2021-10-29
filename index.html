@@ -20,8 +20,8 @@
             <!-- cotnainer dell'immagine visualizzata corrente  -->
             <div class="current_image_container">
                 
-                <div v-for="image in imageAll" class="image_all_container">
-                    <img v-bind:src="image.url" alt="">
+                <div v-for="image, i in imageAll" class="image_all_container" v-bind:class="i === currentIndex ? 'active' : ''">
+                    <img v-bind:src="image.url" v-bind:alt="image.title">
 
                     <div class="text_container">
                         <h1>{{ image.title }}</h1>
@@ -32,14 +32,14 @@
 
             <!-- container della lista completa di immagini -->
             <div class="arrow_container">
-                <a href="#" class="arrow upward_arrow"><i class="fas fa-chevron-up"></i></a>
+                <a href="#" class="arrow upward_arrow" @click="upWardArrow()"><i class="fas fa-chevron-up"></i></a>
                 <div class="image_list_container">
                     <!-- qui dentro ci sarà un v-for per visualizzare le immagini in fila -->
                     <div v-for="image in imageAll">
                         <img v-bind:src="image.url" alt="">
                     </div>
                 </div>
-                <a href="#" class="arrow downward_arrow"><i class="fas fa-chevron-down"></i></a>
+                <a href="#" class="arrow downward_arrow" @click="downWardArrow()"><i class="fas fa-chevron-down"></i></a>
             </div>
         </div>
     </main>
