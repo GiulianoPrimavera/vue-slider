@@ -19,7 +19,7 @@
         <div class="container">
             <!-- cotnainer dell'immagine visualizzata corrente  -->
             <div class="current_image_container">
-                <!-- qui dentro ci sarà un v-for che posizionerà tutte le immagini una sotto l'altra -->
+                
                 <div v-for="image in imageAll" class="image_all_container">
                     <img v-bind:src="image.url" alt="">
 
@@ -35,7 +35,9 @@
                 <a href="#" class="arrow upward_arrow"><i class="fas fa-chevron-up"></i></a>
                 <div class="image_list_container">
                     <!-- qui dentro ci sarà un v-for per visualizzare le immagini in fila -->
-
+                    <div v-for="image in imageAll">
+                        <img v-bind:src="image.url" alt="">
+                    </div>
                 </div>
                 <a href="#" class="arrow downward_arrow"><i class="fas fa-chevron-down"></i></a>
             </div>
