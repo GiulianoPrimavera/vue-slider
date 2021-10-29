@@ -32,10 +32,24 @@ window.addEventListener("DOMContentLoaded", function () {
                     title: 'Paradise',
                     description: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,'
                 }
-            ]
+            ],
+            currentIndex: 0
         },
         methods: {
-
+            //funzione che eseguo al click della freccia superiore
+            upWardArrow(){
+                this.currentIndex--;
+                if(this.currentIndex < 0){
+                    this.currentIndex = this.imageAll.length - 1;
+                }
+            },
+            //funzione che eseguo al click della freccia inferiore
+            downWardArrow(){
+                this.currentIndex++;
+                if(this.currentIndex > this.imageAll.length - 1){
+                    this.currentIndex = 0;
+                }
+            }
         }
     })
 
