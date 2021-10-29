@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue slider</title>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+    <main id="root">
+        {{message}}
+        <!-- container principale -->
+        <div class="container">
+            <!-- cotnainer dell'immagine visualizzata corrente  -->
+            <div class="current_image_container">
+                <!-- qui dentro ci sarà un v-for che posizionerà tutte le immagini una sotto l'altra -->
+                
+            </div>
+
+            <!-- container della lista completa di immagini -->
+            <div class="arrow_container">
+                <a href="#" class="arrow upward_arrow"><i class="fas fa-chevron-up"></i></a>
+                <div class="image_list_container">
+                    <!-- qui dentro ci sarà un v-for per visualizzare le immagini in fila -->
+
+                </div>
+                <a href="#" class="arrow downward_arrow"><i class="fas fa-chevron-down"></i></a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
