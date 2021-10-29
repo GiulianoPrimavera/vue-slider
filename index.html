@@ -15,13 +15,19 @@
 <body>
    
     <main id="root">
-        {{message}}
         <!-- container principale -->
         <div class="container">
             <!-- cotnainer dell'immagine visualizzata corrente  -->
             <div class="current_image_container">
                 <!-- qui dentro ci sarà un v-for che posizionerà tutte le immagini una sotto l'altra -->
-                
+                <div v-for="image in imageAll" class="image_all_container">
+                    <img v-bind:src="image.url" alt="">
+
+                    <div class="text_container">
+                        <h1>{{ image.title }}</h1>
+                        <p>{{ image.description }}</h1>
+                    </div>
+                </div>
             </div>
 
             <!-- container della lista completa di immagini -->
